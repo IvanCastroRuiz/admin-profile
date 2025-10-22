@@ -1,12 +1,21 @@
+import { join } from 'node:path';
+
+const cloudinaryProviderPath = join(__dirname, 'providers', 'cloudinary');
+
 export default ({ env }) => ({
   upload: {
     config: {
-      provider: 'cloudinary',
+      provider: cloudinaryProviderPath,
       providerOptions: {
-        cloudName: env('CLOUDINARY_NAME'),
-        apiKey: env('CLOUDINARY_API_KEY'),
-        apiSecret: env('CLOUDINARY_API_SECRET'),
-        defaultTransformations: env.json('CLOUDINARY_DEFAULT_TRANSFORMATIONS', []),
+        cloud_name: env('CLOUDINARY_NAME'),
+        api_key: env('CLOUDINARY_API_KEY'),
+        api_secret: env('CLOUDINARY_API_SECRET'),
+        default_transformations: env.json('CLOUDINARY_DEFAULT_TRANSFORMATIONS', []),
+      },
+      actionOptions: {
+        upload: {},
+        uploadStream: {},
+        delete: {},
       },
     },
   },

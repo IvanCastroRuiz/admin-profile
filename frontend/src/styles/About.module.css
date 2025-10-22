@@ -1,0 +1,63 @@
+.wrapper {
+  width: min(1080px, 90vw);
+  margin: 0 auto 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.header p {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+}
+
+.timeline {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.milestone {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.year {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #695ca5;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.valueCard {
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .milestone {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

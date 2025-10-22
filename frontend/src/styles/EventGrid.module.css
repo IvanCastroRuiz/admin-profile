@@ -1,0 +1,46 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.75rem;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.cardSurface {
+  height: 100%;
+}
+
+.mediaWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 70%;
+  overflow: hidden;
+}
+
+.cardContent {
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.cardContent h3 {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.cardContent p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+}
+
+.category {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}

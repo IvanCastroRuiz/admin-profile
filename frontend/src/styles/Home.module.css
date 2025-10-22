@@ -1,0 +1,33 @@
+.showcase {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  width: min(1280px, 92vw);
+  margin: 0 auto 4rem;
+}
+
+.sidebar {
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+}
+
+.sectionHeading {
+  margin-bottom: 1.75rem;
+}
+
+.sectionHeading p {
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}

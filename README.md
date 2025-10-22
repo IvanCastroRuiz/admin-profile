@@ -59,3 +59,29 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+## 🎨 Frontend (Next.js)
+
+Este repositorio incluye ahora una SPA/SSR creada con **Next.js + TypeScript** en la carpeta [`frontend/`](frontend/). Esta aplicación implementa la propuesta visual descrita en [`docs/cms-visual-proposal.md`](docs/cms-visual-proposal.md) y se conecta al backend de Strapi (Straplis).
+
+### Configuración
+
+1. Copiá el archivo `.env.example` dentro de `frontend/` y renómbralo a `.env.local`:
+
+   ```bash
+   cd frontend
+   cp .env.example .env.local
+   ```
+
+2. Actualizá `NEXT_PUBLIC_STRAPI_URL` con la URL pública del backend de Strapi.
+
+3. Instalá dependencias y levantá el servidor de desarrollo:
+
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+   El sitio quedará disponible en `http://localhost:3000` y consumirá los contenidos publicados en Straplis.
+
+> Nota: la aplicación utiliza generación estática incremental (`getStaticProps`/`getStaticPaths`). Tras modificar contenido en Strapi, podés forzar la revalidación reconstruyendo o configurando webhooks para ISR.

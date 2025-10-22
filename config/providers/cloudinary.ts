@@ -129,7 +129,7 @@ const request = async <T>(url: string, body: URLSearchParams): Promise<T> => {
   return payload as T;
 };
 
-const cloudinaryProvider = (options: CloudinaryProviderOptions) => {
+const createCloudinaryProvider = (options: CloudinaryProviderOptions) => {
   const { cloud_name: cloudName, api_key: apiKey, api_secret: apiSecret, default_transformations } = options;
 
   if (!cloudName || !apiKey || !apiSecret) {
@@ -208,6 +208,10 @@ const cloudinaryProvider = (options: CloudinaryProviderOptions) => {
       return request(`${baseUrl}/${resourceType}/destroy`, body);
     },
   };
+};
+
+const cloudinaryProvider = {
+  init: createCloudinaryProvider,
 };
 
 export default cloudinaryProvider;
